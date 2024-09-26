@@ -5,5 +5,8 @@ workflows:
   build:
     jobs:
       - cypress/run:
+          command: |
+            npx cypress run
           start: npm run dev
           wait-on: 'http://localhost:3000'
+          record: true
